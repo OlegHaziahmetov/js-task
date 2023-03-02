@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+  <script charset="utf-8">
+    "use strict";
+
+  let a = 1, b = 1;
+  let c = ++a; // 2
+  let d = b++; // 1
+
+  // alert(c);
+  // alert(d);
+
+  // к задаче 2.8.2 
+  let a1 = 2;
+  let b1 = 1 + (a1 *= 2);
+  
+   // alert(a1); // 4
+   // alert(b1); // 5
+
+  // к задаче 2.8.3
+
+  alert("" + 1 + 0); // 10
+  alert("" - 1 + 0); // -1
+  alert(true + false); // 1
+  alert(6 / "3"); // 2
+  alert("2" * "3"); // 6
+  alert(4 + 5 + "px"); // 9px
+  alert("$" + 4 + 5); // $45
+  alert("4" - 2); // 2
+  alert("4px" - 2); // NaN
+  alert("  -9  " + 5); // -9 5
+  alert("  -9  " - 5); // -14
+  alert(null + 1); // 1
+  alert(undefined + 1); // NaN
+  alert(" \t \n" - 2); // -2
+
+  // к задаче 2.8.4
+  
+  let a3 = prompt("Первое число?", 1);
+  let b3 = prompt("Второе число?", 2);
+
+  alert(a3 + b3); // 12
+  alert(+a3 + +b3); // 3
+
+
+
+
+
+
+  </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

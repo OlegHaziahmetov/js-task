@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+  <script charset="utf-8">
+    "use strict";
+   
+    
+
+  function Accumulator (startingValue) {
+      
+    this.value = startingValue;
+
+    this.read = function() {
+       
+       this.value = this.value + +prompt('Введите число ', 0);
+    };
+      
+ }
+
+     
+ 
+
+   let accumulator = new Accumulator(2); // начальное значение 2
+
+   accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+   accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+
+   alert(accumulator.value); // выведет сумму этих значений
+
+
+
+
+
+
+
+  </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

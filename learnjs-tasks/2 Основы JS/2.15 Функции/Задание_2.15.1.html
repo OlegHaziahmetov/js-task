@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+  <script charset="utf-8">
+    "use strict";
+    
+  let age = +prompt('Ваш возраст?', 18);
+
+
+ // function checkAge_1(age) {
+ //  if (age > 18) {
+ //   return true;
+ //   } else {
+ //   return confirm('Родители разрешили?');
+ //  }
+ // }
+
+  function checkAge_2(age) {
+    
+    return age > 18 ? true: confirm('Родители разрешили?');
+     
+  }
+ 
+  function checkAge_3(age) {
+    
+    return age > 18 || confirm('Родители разрешили?');
+
+  }
+ 
+  // checkAge_1(age);
+ 
+ checkAge_2(age);
+ checkAge_3(age);
+
+
+  </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

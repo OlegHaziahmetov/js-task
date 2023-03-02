@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+  <script charset="utf-8">
+    "use strict";
+       
+    //let n = prompt('Введите n интервала: 2 ... n', 10);
+          
+    let n = 10;  
+        
+    newStart:    
+    for (let i=2; i<=n; i++) {
+        for (let j=2; j<i; j++){
+         if ( i % j == 0) continue newStart;
+                
+        }
+        
+     alert( `Поздравляю, еще одно простое число найдено: ${i}!` );  
+    
+    }
+
+  </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+  <script charset="utf-8">
+    "use strict";
+   
+    
+
+  function Calculator () {
+ 
+    this.read = function() {
+       this.number1 = +prompt('Введите число N1', 0);
+       this.number2 = +prompt('Введите число N2', 0);
+    };
+
+    this.sum = function() {
+        return this.number1 + this.number2;
+    };
+
+    this.mul = function() {
+        return this.number1 * this.number2;
+    };
+
+ }
+
+   let calculator = new Calculator();
+
+
+   calculator.read();
+   alert( calculator.sum() );
+   alert( calculator.mul() );
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

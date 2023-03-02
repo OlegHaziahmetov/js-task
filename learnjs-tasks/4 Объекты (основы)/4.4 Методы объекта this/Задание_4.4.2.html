@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+  <script charset="utf-8">
+    "use strict";
+   
+    
+    let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    alert( this.step );
+    return this;
+  }
+};
+
+ladder.up().up().down().showStep().down().showStep(); // показывает 1 затем 0
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

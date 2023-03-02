@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+  <script charset="utf-8">
+    "use strict";
+   
+    
+     
+ function sumSalary(obj) {
+ let sum = 0;
+  for (let key in obj) {
+    sum = sum + obj[key];              
+  };
+    return sum;
+ }
+
+
+ function isEmpty(obj) {
+    
+    for (let prop in obj) {
+        if (prop != undefined) return true;
+    };
+
+    return false;
+  }
+
+    let salaries = {
+      John: 100,
+      Ann: 160,
+      Pete: 130
+ }
+
+  let sum = ( isEmpty(salaries) == false ) ? 0: sumSalary(salaries);
+
+  alert( sum ); 
+
+
+
+
+
+
+
+  </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>
