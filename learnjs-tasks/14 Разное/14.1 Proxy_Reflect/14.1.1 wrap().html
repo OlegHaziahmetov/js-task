@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+    <script charset="utf-8">
+     "use strict";
+
+     let user = {
+        name: "John"
+     };
+
+     function wrap(target) {
+      return new Proxy(target, {  // ваш код:  
+        get(target, prop) {
+          if (prop in target) {
+            return target[prop];
+          } else {
+            return 'Ошибка: такого свойства не существует'; // значение по умолчанию
+          }
+        }      
+      });
+     }
+
+      user = wrap(user);
+
+      alert(user.name); // John
+      alert(user.age); // Ошибка: такого свойства не существует
+
+
+     
+
+
+
+
+
+    </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

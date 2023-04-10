@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+    <script charset="utf-8">
+     "use strict";     
+
+
+      let array = [10, 20, 30];
+
+      array = new Proxy(array, {       // ваш код
+        get(target, prop, receiver) {
+          if ( prop < 0 ) {
+            //return target[target.length + +prop];
+            prop = target.length + +prop;
+            return Reflect.get(target, prop, receiver);
+
+          } else {
+            //return target[+prop];
+            prop = +prop;
+            return Reflect.get(target, prop, receiver);
+          }
+        }      
+           
+        
+
+
+      });
+
+      alert( array[-1] ); // 30
+      alert( array[-2] ); // 20
+      alert( array[0] ); // 10
+
+      // вся остальная функциональность массивов должна остаться без изменений
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+    </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+    <script charset="utf-8">
+     "use strict";
+
+
+
+     let animals = ["тигр", "ёж", "енот", "ехидна", "АИСТ", "ЯК"];
+
+      // ... ваш код ...
+
+
+      let collator = new Intl.Collator("ru", {
+        usage: "sort",
+        sensitivity: "accent",
+        caseFirst: "false",
+
+      });
+      
+      let array = [];
+      let animalsLength = animals.length;
+
+      for (let j=0;  j < animalsLength; j++) {
+        for (let i=0;  i < animalsLength; i++) {        
+        
+        //alert( `${animals[i]}, ${animals[i+1]}`);
+        //alert(collator.compare(animals[i], animals[i+1])); 
+
+          if ( (collator.compare(animals[i], animals[i+1]) == 1 )) {         
+            array[0] = animals[i];
+            animals[i] = animals[i+1];
+            animals[i+1] = array[0];
+          } else continue;              // 1, 0, -1
+
+        };
+      };   
+      
+      /*
+      let collator = new Intl.Collator();
+      animals.sort(function(a, b) {
+      return collator.compare(a, b);
+      });
+      */
+
+      alert( animals )// АИСТ,ёж,енот,ехидна,тигр,ЯК  
+
+
+    </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>

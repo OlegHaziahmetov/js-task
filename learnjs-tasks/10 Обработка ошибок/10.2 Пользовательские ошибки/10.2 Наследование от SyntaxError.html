@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <p>...</p>
+  
+    <script charset="utf-8">
+     "use strict";
+
+     
+
+     class FormarError extends SyntaxError {
+          constructor(message) {
+          super(message);
+          //this.stack = stack;
+          this.name = 'FormatError';
+        }
+      }       
+        
+
+    let err = new FormarError("ошибка форматирования");   
+
+
+    alert( err.message ); // ошибка форматирования
+    alert( err.name ); // FormatError
+    alert( err.stack ); // stack
+
+    alert( err instanceof FormatError ); // true
+    alert( err instanceof SyntaxError ); // true (потому что наследует от SyntaxError)
+
+
+
+
+    </script>
+ 
+  <p>...</p>
+
+</body>
+
+</html>
